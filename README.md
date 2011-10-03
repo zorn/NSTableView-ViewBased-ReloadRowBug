@@ -1,5 +1,9 @@
 The following app demonstrates a recent bug I've run into regarding reloading specific rows in a view based tables.
 
+Radar: 10225466
+
+StackOverflow: http://stackoverflow.com/questions/7616256/
+
 ## Replication Instructions
 
 This app requires Xcode 4.2b6 or newer. It uses ARC and runs exclusively for Lion.

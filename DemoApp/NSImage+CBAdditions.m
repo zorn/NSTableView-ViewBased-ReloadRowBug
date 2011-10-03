@@ -1,0 +1,21 @@
+//
+//  NSImage+CBAdditions.m
+//  ProfitTrain
+//
+//  Created by Michael Zornek on 9/15/11.
+//  Copyright (c) 2011 Clickable Bliss. All rights reserved.
+//
+
+#import "NSImage+CBAdditions.h"
+#import "NSArray+CBAdditions.h"
+
+@implementation NSImage (CBAdditions)
+
++ (NSImage *)cb_randomSystemImage
+{
+    NSArray *allImages = [NSArray arrayWithObjects:NSImageNameQuickLookTemplate,NSImageNameBluetoothTemplate,NSImageNameIChatTheaterTemplate,NSImageNameSlideshowTemplate,NSImageNameActionTemplate ,NSImageNameSmartBadgeTemplate,NSImageNameIconViewTemplate,NSImageNameListViewTemplate,NSImageNameColumnViewTemplate,NSImageNameFlowViewTemplate,NSImageNamePathTemplate,NSImageNameInvalidDataFreestandingTemplate,NSImageNameLockLockedTemplate,NSImageNameLockUnlockedTemplate,NSImageNameGoRightTemplate ,NSImageNameGoLeftTemplate ,NSImageNameRightFacingTriangleTemplate,NSImageNameLeftFacingTriangleTemplate,NSImageNameAddTemplate,NSImageNameRemoveTemplate,NSImageNameRevealFreestandingTemplate,NSImageNameFollowLinkFreestandingTemplate,NSImageNameEnterFullScreenTemplate,NSImageNameExitFullScreenTemplate,NSImageNameStopProgressTemplate,NSImageNameStopProgressFreestandingTemplate,NSImageNameRefreshTemplate,NSImageNameRefreshFreestandingTemplate,NSImageNameBonjour,NSImageNameComputer,NSImageNameFolderBurnable,NSImageNameFolderSmart,NSImageNameFolder,NSImageNameNetwork,NSImageNameMobileMe,NSImageNameMultipleDocuments,NSImageNameUserAccounts,NSImageNamePreferencesGeneral,NSImageNameAdvanced,NSImageNameInfo,NSImageNameFontPanel,NSImageNameColorPanel,NSImageNameUser,NSImageNameUserGroup,NSImageNameEveryone  ,NSImageNameUserGuest,NSImageNameMenuOnStateTemplate,NSImageNameMenuMixedStateTemplate,NSImageNameApplicationIcon,NSImageNameTrashEmpty,NSImageNameTrashFull,NSImageNameHomeTemplate,NSImageNameBookmarksTemplate,NSImageNameCaution,NSImageNameStatusAvailable,NSImageNameStatusPartiallyAvailable,NSImageNameStatusUnavailable,NSImageNameStatusNone, nil];
+    
+    return [NSImage imageNamed:[allImages randomObject]];
+}
+
+@end

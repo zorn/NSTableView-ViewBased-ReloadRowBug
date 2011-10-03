@@ -4,6 +4,8 @@ Radar: 10225466
 
 StackOverflow: http://stackoverflow.com/questions/7616256/
 
+FIXED: I think I fixed this bug. Turns out you have to be careful about closing with [self.tableView endUpdates] before attempting any kind of reloadDataForRowIndexes:columnIndexes: on the tableview.
+
 ## Replication Instructions
 
 This app requires Xcode 4.2b6 or newer. It uses ARC and runs exclusively for Lion.

@@ -306,17 +306,13 @@
         [self.tableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withAnimation:NSTableViewAnimationEffectFade];        
     }
     
-    for (id object in updatedObjects) {
-        // CODE I'D LIKE TO USE
-        NSUInteger index = [people indexOfObject:object];
-        [people indexOfObject:object];
-        [self.tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:index] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
-        
-        // WORKAROUND
-        //[self reloadDataForTableView:self.tableView maintainRowSelection:YES];
-    }
-    
+    // IMPORTANT to endUpdates before you attempt to reloadDataForRowIndexes:columnIndexes: on the tableView
     [self.tableView endUpdates];
+    
+    for (id object in updatedObjects) {
+        NSUInteger index = [people indexOfObject:object];
+        [self.tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:index] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+    }
 }
 
 
